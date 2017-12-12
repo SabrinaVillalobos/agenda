@@ -19,16 +19,16 @@ $("#clist").append(("<div id='contact_" + contact + "' class='contact col l12'>"
         "<h4 id='cinfo'>" + '<i class="material-icons">account_circle</i>' + ' ' + name + "</h4>" +
         '<p id="pnumber">' + '<i class="material-icons">local_phone</i>' + ' ' + phone + '</p>'+
         '<p id="mail" class="mailp">' + '<i class="material-icons">mail</i>' + ' ' + mail + '</p>' +
-          '<a class="waves-effect waves-light btn trash right"><i class="material-icons">delete</i></a>' +
+          '<a class="waves-effect waves-light btn trash right" id="trash"><i class="material-icons">delete</i></a>' +
         '</div>'+
       '</div>'+
     '</div>'+
   '</div>'
   )
-)}
+)
+  $(".trash").click(function(){
+    $(this).parent().remove();
+  });
+}
 );
 });
-
-$(".trash").click(function(){
-$(clist).parent().remove();
-  });
