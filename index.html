@@ -12,38 +12,48 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <!-- Modal Structure -->
+  <!-- inicio modal -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Contactos</h4>
       <div class="row">
+         <form action="javascript:contact()">
         <div class="col s4">
       <p><i class="material-icons">account_circle</i> Nombre: <input type="text" name="name" id="name" placeholder="Ingrese su nombre"></p>
     </div>
         <div class="col s4">
-      <p><i class="material-icons">local_phone</i> Teléfono <input type="text" name="phone" id="phone" placeholder="10 digitos"></p>
+      <p><i class="material-icons">local_phone</i> Teléfono <input type="text" name="phone" id="phone" maxlength="10" placeholder="10 digitos"></p>
     </div>
     <div class="col s4">
-      <p><i class="material-icons">mail</i> Email <input type="text" name="phone" id="phone" placeholder="Ingrese su email"></p>
+      <p><i class="material-icons">mail</i> Email <input type="text" name="mail" id="mail" placeholder="Ingrese su email"></p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn left">Agregar</a>
+      <a href="#!" type="submit" class="modal-action modal-close waves-effect waves-green btn left">Agregar</a>
     </div>
   </div>
+</form>
   </div>
 </div>
-
+<!-- fin modal -->
+<!-- inicio barra de navegación -->
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Lista de Contactos</a>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn modal-trigger plus" href="#modal1"> <i class="material-icons">add</i>Button</a></li>
-        <li><a class="waves-effect waves-light btn search"><i class="material-icons">search</i>Button <i class="material-icons right">cloud</i></a></li>
+        <li><a class="waves-effect waves-light btn search"><i class="material-icons">search</i>Button</a></li>
         <li><a>jQuery</a></li>
       </ul>
     </div>
   </nav>
+<!-- fin barra de navegación -->
+<!-- inicio contenedor contactos -->
+<div class="container">
+<div class="col l12" id="clist">
 
+</div>
+</div>
+<!-- fin contenedor contactos -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
