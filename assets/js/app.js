@@ -31,4 +31,15 @@ $("#clist").append(("<div id='contact_" + contact + "' class='contact col l12'>"
   });
 }
 );
+
+$(".autocomplete").keyup(function(){
+  var name = $(this).val();
+  $(".card-content").hide();
+  $(".card-content").each(function(){
+    var search = $(this).text();
+    if (search.indexOf(name) != -1){
+      $(this).show();
+   }
+    });
+  });
 });

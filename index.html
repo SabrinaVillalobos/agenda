@@ -19,13 +19,13 @@
       <div class="row">
          <form">
         <div class="col s4">
-      <p><i class="material-icons">account_circle</i> Nombre: <input type="text" name="name" id="name" placeholder="Ingrese su nombre"></p>
+      <p><i class="material-icons">account_circle</i> Nombre: <input type="text" name="name" required id="name" placeholder="Ingrese su nombre"></p>
     </div>
         <div class="col s4">
-      <p><i class="material-icons">local_phone</i> Teléfono <input type="text" name="phone" id="phone" maxlength="10" placeholder="10 digitos"></p>
+      <p><i class="material-icons">local_phone</i> Teléfono <input type="text" name="phone" id="phone" maxlength="10" required placeholder="10 digitos"></p>
     </div>
     <div class="col s4">
-      <p><i class="material-icons">mail</i> Email <input type="text" name="mail" id="mail" placeholder="Ingrese su email"></p>
+      <p><i class="material-icons">mail</i> Email <input type="text" name="mail" required id="mail" placeholder="Ingrese su email"></p>
     </div>
     <div class="modal-footer">
       <a href="#!" type="submit" class="modal-action modal-close waves-effect waves-green btn left">Agregar</a>
@@ -35,20 +35,32 @@
   </div>
 </div>
 <!-- fin modal -->
-<!-- inicio barra de navegación -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Lista de Contactos</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn modal-trigger plus" href="#modal1"> <i class="material-icons">add</i>Button</a></li>
-        <li><a class="waves-effect waves-light btn search"><i class="material-icons">search</i>Button</a></li>
-        <li><a>jQuery</a></li>
-      </ul>
-    </div>
-  </nav>
-<!-- fin barra de navegación -->
+<!-- Inicio barra de navegación -->
+ <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Lista de Contactos</a>
+    <ul class="right hide-on-med-and-down">
+    <li><a class="waves-effect waves-light btn modal-trigger plus" href="#modal1"> <i class="material-icons">add</i>Button</a></li>
+    <li>
+      <div class="center row searchbox">
+        <div class="col s12 sbox">
+          <div class="row" id="topbarsearch">
+            <div class="input-field col s6 s12">
+              <i class="material-icons prefix">search</i>
+              <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete">
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="badges.html">JQuery</a></li>
+  </ul>
+</div>
+</nav> 
+<!-- fin barra navegación -->
+
 <!-- inicio contenedor contactos -->
-<div class="container">
+<div class="container contacts">
 <div class="col l12" id="clist">
 
 </div>
